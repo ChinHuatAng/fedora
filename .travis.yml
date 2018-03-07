@@ -4,6 +4,7 @@ services:
 script:
 - docker build -t $DOCKER_USERNAME/fedora:27-autotools .
 after_success:
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - docker push $DOCKER_USERNAME/fedora:27-autotools
 notifications:
   emails:
