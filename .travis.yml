@@ -2,11 +2,14 @@ language: python
 services:
 - docker
 script:
-- "docker build -t chinhuatang/fedora:27-autotools ."
+- docker build -t $DOCKER_USERNAME/fedora:27-autotools .
 after_success:
-- "docker push chinhuatang/fedora:27-autotools"
+- docker push $DOCKER_USERNAME/fedora:27-autotools
 notifications:
   emails:
     recipients:
     - chin.huat.ang@intel.com
-
+env:
+  global:
+  - secure: bLF8tS+dukYcyaUF//z3cdB/7/Q4efYfnYkfD8xmeMVkmxdzsHCEMbYHOrmT4+c205o8Q9URYDcC2gZSF1K2RKotp7yrvRiN0LdrrDRA72TGRTV5EMjBdj/CGg+ITODl8yf/EhjZkBw+zjRfzt1B2Kl+7z4ot9Q06HksGgg56JQA9zOppq0Qf4ReGTMyE+45NdtYZ2/EpG7Ts5+u4ZLRIcE+JnC8XS4uJokHEBLHZaggnsXk8ZYe39FOvw2ryOHRXvHoj9CsPJikLICjHHioNc8p2YI/pYlJwm1Co7gfagaVLKgKaCEgfrlm+G9Qpz98z40um0puiXEIzUQfsecYXrJnQ2TkR8qObYxOEgzS1R7r9Cpckz8He2YKGDnAH6PIkUJzbTz0cW9mXemefZqPxrSUzrb0NRdeL4wiG28lwe+YzF+Y+HhYQqlwvc8tsv2V05Z4g9vfzTBgk6J5A3k7dzkPpgm6IGBMDoyhxjpSynmXJ1snVul9kgntc4PIYpdc99WSWKVMTD/a2HWFl2kZISclSnCMKSLBYq7T0csWC5qtPGPoD97nNyusf06dWtRCOmCT2USt9NPxyEATOB/4A3OF12FP3eboiTC6aN+J/NXZ7FKPyXmSZhHChwD30mD6tDe+9kqMtAgHalVyrLys8PdCSWken+ROoKTG+RQTI2Q=
+  - secure: P2w9zFb1FH5RKDrJDgwO0aJVp/BLYeflr1z7bzjLJbAuPdWnBiZhFnHjNta4z6o+lVEk42tA4ey0NXl+5YqpmIRiFRJxXGRXf8NSziPh2Z4caaOY+LLMGkLDAVhcyV8+vTl8HgSQEBmGT1wWrb7p0xrAlIFRQExX8iP2DSKYDU7t3fsOjobuj2qYp/VHNCPAA+VUGOA72+sqxZFkQd29l/emTjoBHYUCcl9GBsr4d3AKAqnkwPJaX3Pq/OI5DeNX4He4uKP3n4FLHK/Nmb3+pZSKxTMUslLyYG4k4qp86Ju/xVe5P6jtBqGu2W0p6V/T/4JtruF5bOHkqUaPH6TUEGhpj2OXSoOtHxwXV/xWP70ZAzcnOSVPauIUZTMVY0RP9lEmPab8UzppOGwWkcDe511imHPeps/CmLPVSMdJdNX4LzosNh33aetAxG6qUU7Ignd5YSykbBqzGXlVYjdmjIAj0E9rXo4SC2sd+mxp+g9RNmUgvqEVpnqKk4+bhqhhd09zB7y5oXMOcoeTtbie+EG3xtSTBorBSmoxaVys7mtg6sWbEGFZdzyOUCLHmmhtcqZiRqayTKJ/caQTvwfaSBq3bMawKxtfE6rkLk0g09X3I+SSa2vdXR6558ky8KJ/hdMEE5GsRetcyzN0rljuFR+Enc0/s3tZ6xnhakWfsFY=
