@@ -1,0 +1,12 @@
+language: python
+services:
+- docker
+script:
+- "docker build -t chinhuatang/fedora:27-autotools ."
+after_success:
+- "docker push chinhuatang/fedora:27-autotools"
+notifications:
+  emails:
+    recipients:
+    - chin.huat.ang@intel.com
+
