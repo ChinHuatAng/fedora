@@ -15,4 +15,4 @@
 
 FROM fedora:28
 
-RUN dnf -y install gcc gcc-c++ autoconf automake libtool cmake && dnf clean all
+RUN dnf -y install gcc gcc-c++ autoconf automake libtool cmake make && dnf clean all
