@@ -13,6 +13,6 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-FROM fedora:27
+FROM fedora:28
 
-RUN dnf -y install gcc gcc-c++ autoconf automake libtool && dnf clean all
+RUN dnf -y install gcc gcc-c++ autoconf automake libtool cmake && dnf clean all

@@ -2,10 +2,10 @@ language: python
 services:
 - docker
 script:
-- docker build -t $DOCKER_USERNAME/fedora:27-autotools .
+- docker build -t $DOCKER_USERNAME/fedora:28-autotools-cmake .
 after_success:
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-- docker push $DOCKER_USERNAME/fedora:27-autotools
+- docker push $DOCKER_USERNAME/fedora:28-autotools-cmake
 notifications:
   emails:
     recipients:
